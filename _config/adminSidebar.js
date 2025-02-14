@@ -13,7 +13,7 @@ export default [
       pages.qsetupagione.customers,
       pages.qsetupagione.gates,
       pages.qsetupagione.passengerCarrierStations,
-      pages.qsetupagione.passengerContractRulesServices,
+      pages.qsetupagione.passengerCarrierStationsSecurity,
       pages.qsetupagione.passengerContractRules,
       pages.qsetupagione.contractRules,
       pages.qramp.categories,

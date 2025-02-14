@@ -26,7 +26,7 @@ export default {
       return {
         crudId: this.crudId,
         apiRoute: "apiRoutes.qsetupagione.passengerCarrierStations",
-        permission: 'setup.passenger-carrier-stations',
+        permission: 'setup.security-carrier-stations',
         read: {
           columns: [
             {
@@ -88,7 +88,7 @@ export default {
           requestParams: {
             include: 'station,airline,contract,customer',
             filter: {
-              type: 'passenger',
+              type: 'security',
             }
           },
           filters: {
@@ -247,7 +247,7 @@ export default {
             }
           },
           type: {
-            value: 'passenger'
+            value: 'security'
           }
         },
         getDataForm: (formData, type) => {

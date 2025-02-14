@@ -163,16 +163,17 @@ export default {
       refresh: true,
     }
   },
-  passengerContractRulesServices: {
-    permission: 'ramp.passenger-contract-rules-services.manage',
+  passengerCarrierStationsSecurity: {
+    permission: 'setup.security-carrier-stations.manage',
     activated: true,
     authenticated: true,
-    path: '/ramp/passenger-contract-rules-services/index',
-    name: 'qramp.admin.passengerContractRulesServices',
-    page: () => import('modules/qsetupagione/_crud/passengerContractRulesServices.vue'),
+    path: '/setup/SecurityCarrierStations',
+    name: 'qsetupagione.admin.SecurityCarrierStations',
+    crud: import('modules/qsetupagione/_crud/securityCarrierStation'),
+    page: () => import('modules/qcrud/_pages/admin/crudPage'),
     layout: () => import('layouts/master.vue'),
-    title: 'Passenger contract rules services',
-    icon: 'fa-light fa-briefcase',
+    title: 'Security Flight Rules',
+    icon: 'fal fa-building',
     subHeader: {
       refresh: true,
     }
