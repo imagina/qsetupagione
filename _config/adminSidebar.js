@@ -4,7 +4,7 @@ export default [
     title: 'isetup.cms.sidebar.setupInfo',
     icon: 'fal fa-landmark',
     children: [
-      pages.qsetupagione.areas,  
+      pages.qsetupagione.areas,
       pages.qramp.attributes,
       pages.qsetupagione.buildings,
       pages.qsetupagione.companies,
@@ -13,6 +13,7 @@ export default [
       pages.qsetupagione.customers,
       pages.qsetupagione.gates,
       pages.qsetupagione.passengerCarrierStations,
+      pages.qsetupagione.passengerContractRulesServices,
       pages.qsetupagione.passengerContractRules,
       pages.qsetupagione.contractRules,
       pages.qramp.categories,

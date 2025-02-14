@@ -61,9 +61,9 @@ export default {
       return {
         crudId: this.crudId,
         apiRoute: 'apiRoutes.qramp.passengerContractRules',
-        permission: 'ramp.passenger-contract-rules',
+        permission: 'ramp.passenger-contract-rules-services',
         create: {
-          title: 'Create passenger contract rules',
+          title: 'Create passenger contract rules services',
         },
         extraActions: [{
           props: {
@@ -211,12 +211,12 @@ export default {
           requestParams: {
             include: 'contract,contractLine,product',
             filter: {
-              type: 'passenger'
+              type: 'security'
             }
           }
         },
         update: {
-          title: 'Update passenger contract rules',
+          title: 'Update passenger contract rules services',
         },
         delete: true,
         formLeft: {
@@ -386,7 +386,7 @@ export default {
             },
           },
           type: {
-            value: 'passenger',
+            value: 'security',
           },
         },
         formRight: {}

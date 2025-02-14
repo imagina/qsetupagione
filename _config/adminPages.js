@@ -163,4 +163,18 @@ export default {
       refresh: true,
     }
   },
+  passengerContractRulesServices: {
+    permission: 'ramp.passenger-contract-rules-services.manage',
+    activated: true,
+    authenticated: true,
+    path: '/ramp/passenger-contract-rules-services/index',
+    name: 'qramp.admin.passengerContractRulesServices',
+    page: () => import('modules/qsetupagione/_crud/passengerContractRulesServices.vue'),
+    layout: () => import('layouts/master.vue'),
+    title: 'Passenger contract rules services',
+    icon: 'fa-light fa-briefcase',
+    subHeader: {
+      refresh: true,
+    }
+  },
 }
