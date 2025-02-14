@@ -210,9 +210,6 @@ export default {
           actions: [],
           requestParams: {
             include: 'contract,contractLine,product',
-            filter: {
-              type: 'passenger'
-            }
           }
         },
         update: {
@@ -384,9 +381,6 @@ export default {
               'clearable': true,
               vIf: this.crudInfo.quantityRule === 'surplus',
             },
-          },
-          type: {
-            value: 'passenger',
           },
         },
         formRight: {}

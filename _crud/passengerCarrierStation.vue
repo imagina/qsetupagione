@@ -87,6 +87,9 @@ export default {
           ],
           requestParams: {
             include: 'station,airline,contract,customer',
+            filter: {
+              type: 'passenger',
+            }
           },
           filters: {
             status: {
@@ -243,6 +246,9 @@ export default {
               ]
             }
           },
+          type: {
+            value: 'passenger'
+          }
         },
         getDataForm: (formData, type) => {
           return new Promise(resolve => {
