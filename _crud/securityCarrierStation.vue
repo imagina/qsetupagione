@@ -1,13 +1,18 @@
 <template></template>
 
 <script>
-import { COMPANY_PASSENGER } from 'src/modules/qramp/_components/model/constants.js'
+import {
+  BUSINESS_UNIT_SECURITY,
+  COMPANY_PASSENGER,
+  COMPANY_SECURITY
+} from 'src/modules/qramp/_components/model/constants.js'
 import workOrderList from 'src/modules/qramp/_store/actions/workOrderList.ts'
 import qRampStore from 'src/modules/qramp/_store/qRampStore.js'
 export default {
   async beforeCreate() {
-   await qRampStore().setIsPassenger(true)
-   await workOrderList().getCustomerWithContract()
+    await qRampStore().setIsPassenger(false);
+    qRampStore().setBusinessUnitId(BUSINESS_UNIT_SECURITY);
+    await workOrderList().getCustomerWithContract()
   },
   data() {
     return {
@@ -16,8 +21,8 @@ export default {
   },
   computed: {
     companies() {
-      const passengerCompanies = this.$getSetting('ramp::passengerCompanies') || []
-      return passengerCompanies.length > 0 ? passengerCompanies : COMPANY_PASSENGER;
+      const securityCompanies = this.$getSetting('ramp::securityCompanies') || []
+      return securityCompanies.length > 0 ? securityCompanies : COMPANY_SECURITY;
     },
     crudInfo() {
       return this.$store.state.qcrudComponent.component[this.crudId] || {}
